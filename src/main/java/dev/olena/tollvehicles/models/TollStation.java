@@ -45,5 +45,12 @@ public class TollStation {
 
     public List<Vehicle> getVehicles() {
         return vehicles;
-    }    
+    }
+
+    public void printVehicleList() {
+        System.out.println("Vehicles at " + name + " in " + city + ":");
+        for (Vehicle vehicle : vehicles) {
+            System.out.println(vehicle.getClass().getSimpleName() + " with registration plate " + vehicle.getRegistrationPlate() + " and toll " + vehicle.calculateToll());
+        }
+    }
 }
